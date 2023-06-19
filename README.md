@@ -1,5 +1,8 @@
 # Chatbot Tutorial
 
+# App Demo?
+[Clik here for demo](https://chatbotdemo.up.railway.app)
+
 # What is this useful for?
 
 - Get an idea how to get django-channels working
