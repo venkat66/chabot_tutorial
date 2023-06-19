@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_bqnm5(7@6di-h#2#x1m2y!87p(eqt^9ufc+zf*6p(c5+b6rp-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["chatbotdemo.up.railway.app"]
 

@@ -25,4 +25,4 @@ And start the server with
 
 `python manage.py runserver`
 
-You should now be able to go to localhost:8000/chat/ and chat with the bot
+You should now be able to go to localhost:8000 and chat with the bot
