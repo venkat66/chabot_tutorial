@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn chatbot_tutorial.wsgi
+web: daphne chatbot_tutorial.asgi:application --port $PORT --bind 0.0.0.0
