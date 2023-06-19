@@ -8,7 +8,7 @@
 # How to use this branch
 
 To get this running, simply run the  the following 
--Note: This project is not working on windows so use linux(ubuntu-tested).
+# Note: This project is not working on windows so use linux(ubuntu-tested).
 
 ## Step 1: Install requirements.txt
 
