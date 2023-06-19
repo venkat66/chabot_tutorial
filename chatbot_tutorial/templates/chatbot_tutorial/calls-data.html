@@ -1,0 +1,76 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="shortcut icon" href="{% static 'chatbot_tutorial/favicon.ico' %}" type="image/x-icon">
+        <link rel="icon" href="{% static 'chatbot_tutorial/favicon.ico' %}" type="image/x-icon">
+
+        <link rel="stylesheet" href="{% static 'chatbot_tutorial/bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'chatbot_tutorial/css/chat.css' %}">
+       
+        <link href="{% static 'chatbot_tutorial/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#example').DataTable();
+            });
+        </script>
+        <base target="_blank"/>
+        <title>Websockets Bot</title>
+
+    </head>
+    <body>
+        <!-- Wrap all page content here -->
+        <center >
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+              <a href="{% url 'chat' %}" class="btn btn-success" type="button">Chat</a>
+              <a href="{% url 'logout' %}" class="btn btn-danger" type="button">Log out</a>
+            </form>
+          </nav>
+        </center>
+       
+            <!-- Begin page content -->
+            <div class="container mt-5" style="margin-top: 100px;">
+
+                <table id="example" class="table table-striped" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Fat</th>
+                            <th>Dumb</th>
+                            <th>Stupid</th>
+                            <th>Last Call</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in data %}
+                        <tr>
+                            <td>{{i.user.username}}</td>
+                            <td>{{i.fat_count}}</td>
+                            <td>{{i.dumb_count}}</td>
+                            <td>{{i.stupid_count}}</td>
+                            <td>{{i.last_modified}}</td>
+                            <td>{{i.total_calls}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+
+            </div>
+     
+ 
+
+
+</body>
+</html>
