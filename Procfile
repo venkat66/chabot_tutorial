@@ -1,1 +1,1 @@
-web: daphne daphne -p 8001 chatbot_tutorial.asgi:application
+web: python manage.py migrate && gunicorn chatbot_tutorial.wsgi
